@@ -44,7 +44,9 @@
 % PREAMBLE OF FIGURES
 
 \usepackage{graphicx}
-\graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)
+
+\graphicspath{{figures/}{../figures/}}% Specifies where to look for included images (trailing slash required)
+%\graphicspath{{figures/}{./}}
 
 %\usepackage{wrapfig} % Allows in-line images
 %\usepackage{subcaption} %Subfigure component
@@ -63,8 +65,8 @@
 \usepackage{booktabs} % Required for better horizontal rules in tables
 %\usepackage{multirow}
 
+\usepackage{paralist} %Inline list(inparaenum), always on top of enumitem
 \usepackage{enumitem} % Required for list customisation
-%\usepackage{paralist} %Inline list
 
 \setlist{noitemsep} % No spacing between list items
 \setlist[itemize]{label=\textbullet,nosep, topsep=0pt, partopsep=0pt} % No spacing between itemize
