@@ -9,24 +9,26 @@ This template was created using article class in 10/11/2020. The purpose of this
 or
 `%! TeX program = lualatex` for LuaLatex(recommended)
 
-
-
-# Convert Lualatex to HTML
-This template has already been configured with helpers4ht in mycfg file. Some style of text required package which can be activated in preamble main.tex.
-
-## Install package 
+### Create texmf directory for custom package 
 Install Helpers4ht
 
 `mkdir -p $(kpsewhich -var-value TEXMFHOME)/tex/latex`
 
 This will create directory ~/Library/texmf/tex/latex.
 
+### Lualatex to HTML package support
+This template has already been configured with helpers4ht in mycfg file. Some style of text required package which can be activated in preamble main.tex. Just clone this rep in texmf/tex/latex folder.
+
 `git clone https://github.com/777uliahshafar/helpers4ht.git`
 
-
-## Compile HTML
+### Compile HTML
 
 `make4ht -ul filename "configfilename"`
 
 -u = compile with encoing utf-8
 -l = cimpile with lualatex engine
+
+## Datetime2 for bahasai
+The default datetime2 doesn't support DTMtoday Indonesian date format. In order to achive it, create/copy custom datetime2-bahasai.ldf package in texmf from dotfiles.
+
+
