@@ -66,10 +66,33 @@
 %\usepackage{multirow}
 
 \usepackage{paralist} %Inline list(inparaenum), always on top of enumitem
+\usepackage{longtable} % Enable table cross multiple page
+\usepackage{array} %Mostly formatting columns and spacing
 \usepackage{enumitem} % Required for list customisation
 
 \setlist{noitemsep} % No spacing between list items
-\setlist[itemize]{label=\textbullet,nosep, topsep=0pt, partopsep=0pt} % No spacing between itemize
+\setlist[itemize]{label=\textbullet, nosep, topsep=0pt, partopsep=0pt, parsep=0pt} % No spacing between itemize
+
+% Remove spacing between itemize env. inside table env.
+\makeatletter
+% Enumerated columns
+\newcolumntype{e}[1]{%
+    >{\minipage[t]{\linewidth}\let\\\tabularnewline
+      \enumerate
+      \addtolength{\rightskip}{0pt plus 50pt}% for raggedright
+      \setlength{\itemsep}{-\parsep}}%
+    p{#1}%
+    <{\@finalstrut\@arstrutbox\endenumerate\endminipage}}
+
+% Itemized columns
+\newcolumntype{i}[1]{%
+    >{\minipage[t]{\linewidth}\let\\\tabularnewline
+      \itemize
+      \addtolength{\rightskip}{0pt plus 50pt}% for raggedright
+      \setlength{\itemsep}{-\parsep}}%
+    p{#1}%
+    <{\@finalstrut\@arstrutbox\enditemize\endminipage}}
+\makeatother
 
 %----------------------------------------------------------------------------------------
 % PREAMBLE OF BIBLIOGRAPHY

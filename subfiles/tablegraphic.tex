@@ -1,8 +1,8 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\section{Flowchart Example TiKz}
-
-\lipsum[1-5]
+\section{Tables and Graphics}
+\subsection{FlowCart Sample 1}
+\lipsum[1-2]
 %\begin{figure}[hp]
 %\centering
 %\begin{tikzpicture}[node distance=2cm]
@@ -72,51 +72,62 @@
 %\end{figure}
 
 
-\section{Flowchart Example 2 TiKz}
+\subsection{Flowchart Sample 2 }
 
-\lipsum[6-10]
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}[node distance=2cm]
+\lipsum[3-4]
+%\begin{figure}[htbp]
+%\centering
+%\begin{tikzpicture}[node distance=2cm]
+%
+%	\node (tit) [startstop, text width= 5cm] {Fitur Fisik Binaan pada Aktivitas Luar Jl. Pinggir Laut};
+%
+%	\node (va1) [startstop, below of=tit, text width=5cm, xshift=-3cm] {Variabel Bebas\\ Fitur Fisik Binaan};
+%
+%	\node (va2) [startstop, below of=tit, text width=5cm, xshift=3cm] {Variabel Tergantung\\ Aktivitas Luar};
+%
+%	\node (de1) [startstop, below of=va1, text width=5cm, yshift=-2cm] {
+%		\textbf{Sub Variabel Bebas}\\
+%		- Elemen Jalan \\
+%		- Kualitas Jalan \\
+%		- Elemen Tempat Duduk \\
+%		- Kualitas Tempat Duduk \\
+%		- Elemen Alami \\
+%		- Kualitas Alami \\
+%		- Fasilitas \& Aminities \\
+%		- Estetika \\
+%
+%	};
+%	\node (de2) [startstop, below of=va2, text width=5cm, yshift=-2cm] {
+%			\textbf{Sub Variable Tergantung}\\
+%		- Aktivitas relaxsasi\\
+%		- Aktivitas fisik\\
+%		- Travel aktif\\
+%		- Interaction with wildlife and nature\\
+%		- Interaksi sosial\\
+%		- Partisipasi di aktivitas grup\\
+%		};
+%\draw [arrow] (tit) -| (va1);
+%\draw [arrow] (va1) -- (de1);
+%\draw [arrow] (tit) -| (va2);
+%\draw [arrow] (va2) -- (de2);
+%
+%\end{tikzpicture}
+%\caption{Alur Pikir}
+%\end{figure}
 
-	\node (tit) [startstop, text width= 5cm] {Fitur Fisik Binaan pada Aktivitas Luar Jl. Pinggir Laut};
+\subsection{Longtable Sample}
+This is a sample of longtable with itemize environment. Spacing between environment of itemize being reduced.
+\begin{longtable}{p{.5\textwidth} p{.5\textwidth}}
+	\caption{Caption} \\
+	\label{tab:label} \\
+	text & \multicolumn{1}{i{.4\textwidth}}{\item text \item text}\\
 
-	\node (va1) [startstop, below of=tit, text width=5cm, xshift=-3cm] {Variabel Bebas\\ Fitur Fisik Binaan};
+\end{longtable}
 
-	\node (va2) [startstop, below of=tit, text width=5cm, xshift=3cm] {Variabel Tergantung\\ Aktivitas Luar};
 
-	\node (de1) [startstop, below of=va1, text width=5cm, yshift=-2cm] {
-		\textbf{Sub Variabel Bebas}\\
-		- Elemen Jalan \\
-		- Kualitas Jalan \\
-		- Elemen Tempat Duduk \\
-		- Kualitas Tempat Duduk \\
-		- Elemen Alami \\
-		- Kualitas Alami \\
-		- Fasilitas \& Aminities \\
-		- Estetika \\
 
-	};
-	\node (de2) [startstop, below of=va2, text width=5cm, yshift=-2cm] {
-			\textbf{Sub Variable Tergantung}\\
-		- Aktivitas relaxsasi\\
-		- Aktivitas fisik\\
-		- Travel aktif\\
-		- Interaction with wildlife and nature\\
-		- Interaksi sosial\\
-		- Partisipasi di aktivitas grup\\
-		};
-\draw [arrow] (tit) -| (va1);
-\draw [arrow] (va1) -- (de1);
-\draw [arrow] (tit) -| (va2);
-\draw [arrow] (va2) -- (de2);
-
-\end{tikzpicture}
-\caption{Alur Pikir}
-\end{figure}
-
-\section{readme}
-\lipsum[11-12]
+%\section{readme}
+%\lipsum[11-12]
 % Comment tikz flowchart with command :x,xxs/^/%
 % Uncomment tikz flowchart with command :x,xxs/^%/
 % xx = linenumbers
