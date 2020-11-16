@@ -66,33 +66,31 @@
 %\usepackage{multirow}
 
 \usepackage{paralist} %Inline list(inparaenum), always on top of enumitem
-\usepackage{longtable} % Enable table cross multiple page
-\usepackage{array} %Mostly formatting columns and spacing
+%\usepackage{longtable} % Enable table cross multiple page
+%\usepackage{array} %Mostly formatting columns and spacing
 \usepackage{enumitem} % Required for list customisation
 
 \setlist{noitemsep} % No spacing between list items
 \setlist[itemize]{label=\textbullet, nosep, topsep=0pt, partopsep=0pt, parsep=0pt} % No spacing between itemize
 
-% Remove spacing between itemize env. inside table env.
-\makeatletter
-% Enumerated columns
-\newcolumntype{e}[1]{%
-    >{\minipage[t]{\linewidth}\let\\\tabularnewline
-      \enumerate
-      \addtolength{\rightskip}{0pt plus 50pt}% for raggedright
-      \setlength{\itemsep}{-\parsep}}%
-    p{#1}%
-    <{\@finalstrut\@arstrutbox\endenumerate\endminipage}}
-
-% Itemized columns
-\newcolumntype{i}[1]{%
-    >{\minipage[t]{\linewidth}\let\\\tabularnewline
-      \itemize
-      \addtolength{\rightskip}{0pt plus 50pt}% for raggedright
-      \setlength{\itemsep}{-\parsep}}%
-    p{#1}%
-    <{\@finalstrut\@arstrutbox\enditemize\endminipage}}
-\makeatother
+% Remove spacing between itemize env. inside table env., first column type for enumerate(e), second coulmn type for itemize(i)
+%\makeatletter
+%\newcolumntype{e}[1]{%
+%    >{\minipage[t]{\linewidth}\let\\\tabularnewline
+%      \enumerate
+%      \addtolength{\rightskip}{0pt plus 50pt}% for raggedright
+%      \setlength{\itemsep}{-\parsep}}%
+%    p{#1}%
+%    <{\@finalstrut\@arstrutbox\endenumerate\endminipage}}
+%
+%\newcolumntype{i}[1]{%
+%    >{\minipage[t]{\linewidth}\let\\\tabularnewline
+%      \itemize
+%      \addtolength{\rightskip}{0pt plus 50pt}% for raggedright
+%      \setlength{\itemsep}{-\parsep}}%
+%    p{#1}%
+%    <{\@finalstrut\@arstrutbox\enditemize\endminipage}}
+%\makeatother
 
 %----------------------------------------------------------------------------------------
 % PREAMBLE OF BIBLIOGRAPHY
@@ -116,7 +114,7 @@
 % CONFIGURATION OF TEXT(PARAGRAPH, SECTION, DATE, OTHERS)
 
 
-\usepackage{lipsum}
+\usepackage{lipsum} % Add  dummy text
 \usepackage[hidelinks]{hyperref}
 \usepackage{setspace} %Alter spacing in paragraph
 \onehalfspacing %Specify spacing of setspace
@@ -127,7 +125,23 @@
 %\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1} %Insert Keyword Command
 
 %\usepackage[bahasai,showdow, calc]{datetime2} %Formating date or DTMtoday command, files ldf needs customization.
+%----------------------------------------------------------------------------------------
+% PRINT CODE IN LATEX DOCUMENT
+\usepackage{listings}
+\lstdefinestyle{fixprintcode}{
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=none,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=trBL}
 
+    \lstset{style=fixprintcode}
 %----------------------------------------------------------------------------------------
 % CONFIGURATION OF TIKZ
 %\usepackage{tikz}
