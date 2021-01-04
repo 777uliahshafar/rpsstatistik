@@ -37,8 +37,16 @@
 \setmainlanguage{bahasai}
 \setotherlanguages{english}
 
-\addto\captionsenglish{\renewcommand{\figurename}{Gambar}} % Rename caption's command
-\addto\captionsenglish{\renewcommand{\tablename}{Tabel}}
+% Rename caption's command for bahasai
+\addto\captionsmalay{
+    \renewcommand{\abstractname}{Ringkasan}
+}
+% Rename caption's command for english
+\addto\captionsenglish{
+    \renewcommand{\figurename}{Gambar}
+    \renewcommand{\tablename}{Tabel}
+    \renewcommand{\abstractname}{ABSTRACT}
+}
 
 %----------------------------------------------------------------------------------------
 % PREAMBLE OF FIGURES
@@ -284,4 +292,3 @@
 
 %\usepackage{mystyles} %Change fonts color,size with command \myhighlight
 %\usepackage{myspacing} %Change linespacing via environment e.g onehalf.
-
