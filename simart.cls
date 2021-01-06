@@ -34,8 +34,9 @@
 % PREAMBLE OF ENGLISH LANGUAGE HYPHENATION
 %\usepackage[english]{babel} %PdfLatex Compiler Engine
 \usepackage{polyglossia} %LuaLatex Compiler Engine
-\setmainlanguage{bahasai}
+\setmainlanguage[variant=indonesian]{melayu}
 \setotherlanguages{english}
+\PolyglossiaSetup{malay}{indentfirst=true}
 
 % Rename caption's command for bahasai
 \addto\captionsmalay{
