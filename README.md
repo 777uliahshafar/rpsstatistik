@@ -1,6 +1,6 @@
 # SIMART TEMPLATE
 
-This template was created using article class in 10/11/2020. The purpose of this template is to create fabolous article. With the help of helpers4ht, the configuration of this template can turn the compilation to HTML. In case we need to create word file, we can easily copy text from html file.
+This template was created using article class in 10/11/2020. The purpose of this template is to create fabolous article. With the help of helpers4ht, the configuration of this template can turn the compilation to HTML. In case we need to create word file, we can easily copy text from html file or open html file with Microsoft word.
 
 ## Change compiler engine
 
