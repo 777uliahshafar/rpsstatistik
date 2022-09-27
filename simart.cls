@@ -49,6 +49,9 @@
     \renewcommand{\abstractname}{ABSTRACT}
 }
 
+% Syntax will be active after first compile
+%\usepackage{comment}
+
 %----------------------------------------------------------------------------------------
 % PREAMBLE OF FIGURES
 
