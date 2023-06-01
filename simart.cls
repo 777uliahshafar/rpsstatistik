@@ -4,7 +4,6 @@
 % LaTeX Class
 % Version 1.0 (10/11/20)
 %
-
 % This class originates by:
 % Vel and  Nicolas Diaz
 %
