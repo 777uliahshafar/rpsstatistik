@@ -21,7 +21,7 @@
 %----------------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{simart}[2020/11/10 Simart Class v1.0]
+\ProvidesClass{simrep}[2023/10/09 Simrep Class v1.0]
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}} % Pass through any options to the base class
 \ProcessOptions\relax % Process given options
@@ -40,13 +40,13 @@
 
 % Rename caption's command for bahasai
 \addto\captionsmalay{
-    \renewcommand{\abstractname}{Ringkasan}
+	\renewcommand{\abstractname}{Ringkasan}
 }
 % Rename caption's command for english
 \addto\captionsenglish{
-    \renewcommand{\figurename}{Gambar}
-    \renewcommand{\tablename}{Tabel}
-    \renewcommand{\abstractname}{ABSTRACT}
+	\renewcommand{\figurename}{Gambar}
+	\renewcommand{\tablename}{Tabel}
+	\renewcommand{\abstractname}{ABSTRACT}
 }
 
 % Syntax will be active after first compile
@@ -76,7 +76,13 @@
 \usepackage{longtable} % Enable table cross multiple page
 \usepackage{tabularx}
 \usepackage{booktabs} % Required for better horizontal rules in tables
-%\usepackage{multirow}
+\usepackage{multirow}
+
+\usepackage{makecell} %line break inside table. Alternatively, for a single cell, you can use the \makecell or
+\renewcommand\theadalign{bc}  %\thead commands with the optional argument [vh], v is t,c, or b. h is l,c,or r
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
 
 \usepackage{paralist} %Inline list(inparaenum), always on top of enumitem
 %\usepackage{longtable} % Enable table cross multiple page
@@ -142,19 +148,19 @@
 % PRINT CODE IN LATEX DOCUMENT
 \usepackage{listings}
 \lstdefinestyle{fixprintcode}{
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbers=none,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=2,
-    frame=trBL}
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	numbers=none,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2,
+	frame=trBL}
 
-    \lstset{style=fixprintcode}
+\lstset{style=fixprintcode}
 %----------------------------------------------------------------------------------------
 % CONFIGURATION OF TIKZ
 %\usepackage{tikz}
@@ -230,8 +236,8 @@
 []%after-title
 
 \titlespacing\section{0pt}%left
-{11pt plus 4pt minus 2pt}%before
-{11pt plus 2pt minus 2pt}%after
+ {11pt plus 4pt minus 2pt}%before
+ {11pt plus 2pt minus 2pt}%after
 
 \titlespacing\subsection{0pt}{22pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
@@ -242,15 +248,15 @@
 
 	\begin{center} % align
 		\begin{singlespace}
-		\@title % Increase the font size of the title
-		\@date % Date
+			\@title % Increase the font size of the title
+			\@date % Date
 		\end{singlespace}
 		\vspace{11pt}
-	\begin{onehalfspacing}
-		\@author\\ % Author name
-	\end{onehalfspacing}
-	\vspace{11pt}
-		\end{center}
+		\begin{onehalfspacing}
+			\@author\\ % Author name
+		\end{onehalfspacing}
+		\vspace{11pt}
+	\end{center}
 }
 \makeatother
 
