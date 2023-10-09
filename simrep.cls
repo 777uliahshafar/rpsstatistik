@@ -50,7 +50,7 @@
 }
 
 % Syntax will be active after first compile
-%\usepackage{comment}
+\usepackage{comment}
 
 %----------------------------------------------------------------------------------------
 % PREAMBLE OF FIGURES
