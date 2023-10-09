@@ -92,6 +92,9 @@
 \setlist{noitemsep} % No spacing between list items
 \setlist[itemize]{label=\textbullet, nosep, topsep=0pt, partopsep=0pt, parsep=0pt} % No spacing between itemize
 
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}} %centering elemen in table
+
+
 % Remove spacing between itemize env. inside table env., first column type for enumerate(e), second coulmn type for itemize(i)
 %\makeatletter
 %\newcolumntype{e}[1]{%
@@ -183,13 +186,13 @@
 \geometry{
 	paper=a4paper, % Paper size, change to letterpaper for US letter size
 	top=1in, % Top margin
-	bottom=1in, % Bottom margin
-	left=1.25in, % Left margin
-	right=1in, % Right margin
+	bottom=.75in, % Bottom margin
+	left=1in, % Left margin
+	right=.75in, % Right margin
 	headheight=0.75cm, % Header height
 	footskip=1.5cm, % Space from the bottom margin to the baseline of the footer
 	headsep=0.75cm, % Space from the top margin to the baseline of the header
-	%showframe, % Uncomment to show how the type block is set on the page
+	showframe, % Uncomment to show how the type block is set on the page
 }
 
 %----------------------------------------------------------------------------------------
